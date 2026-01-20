@@ -153,11 +153,14 @@ const App: React.FC = () => {
   return (
     <div className="h-screen flex flex-col bg-slate-50 overflow-hidden">
       <header className="bg-white/95 backdrop-blur-md border-b border-slate-200 px-6 py-4 flex items-center justify-between z-30 shadow-sm shrink-0">
-        <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.location.reload()}>
+        <div className="flex items-center gap-3 group cursor-pointer" onClick={() => window.location.reload()}>
           <div className="bg-rose-600 p-2 rounded-xl shadow-lg group-hover:rotate-12 transition-transform">
             <Scissors className="text-white w-5 h-5" />
           </div>
-          <h1 className="text-xl font-black tracking-tighter text-slate-800 uppercase italic">A4<span className="text-rose-600">poster</span></h1>
+          <div className="flex flex-col">
+            <h1 className="text-xl font-black tracking-tighter text-slate-800 uppercase italic leading-none">A4<span className="text-rose-600">poster</span></h1>
+            <span className="text-[8px] font-bold text-slate-400 uppercase tracking-tighter mt-0.5">Criado pelo Prof. Ricardo ARTE</span>
+          </div>
         </div>
         
         {image && (
@@ -229,7 +232,7 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Card de Doação - Tamanho Reduzido */}
+              {/* Card de Doação */}
               <div className="w-full max-w-sm bg-[#F8F9F5] rounded-[2rem] p-5 border border-[#E2E8F0] shadow-sm relative group">
                 <div className="absolute top-2 right-4 opacity-5 rotate-12">
                    <Star className="w-12 h-12 text-slate-800" />
